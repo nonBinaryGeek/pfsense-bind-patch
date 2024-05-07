@@ -281,8 +281,8 @@ EOD;
 
 logging {
 	channel custom {
-		syslog daemon;
-		print-time no;
+		file "/var/log/bind.log" versions 3 size 100m;
+		print-time yes;
 		print-severity yes;
 		print-category yes;
 		severity {$log_severity};
